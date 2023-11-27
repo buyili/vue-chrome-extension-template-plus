@@ -10,7 +10,7 @@ module.exports = merge(baseWebpack, {
   module: {
     rules: styleLoaders({ sourceMap: false })
   },
-  devtool: '#cheap-module-eval-source-map',
+  devtool: '#cheap-sourse-map',
   plugins: [
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({

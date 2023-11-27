@@ -1,6 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
-const ChromeReloadPlugin  = require('wcer')
+const ChromeReloadPlugin = require('wcer-plus')
 const {cssLoaders, htmlPage} = require('./tools')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
@@ -10,12 +10,12 @@ module.exports = {
     tab: resolve('./tab'),
     popup: resolve('./popup'),
     options: resolve('./options'),
-    content: resolve('./content'), 
+    content: resolve('./content'),
     devtools: resolve('./devtools'),
     background: resolve('./backend'),
-    "service_worker": resolve('./service_worker'),
+    'service_worker': resolve('./service_worker'),
     panel: resolve('./devtools/panel'),
-    inject: resolve('./content/inject'),
+    inject: resolve('./content/inject')
   },
   output: {
     path: path.join(__dirname, '..', 'build'),
@@ -62,7 +62,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include:  [path.join(__dirname, '..', 'src'), path.join(__dirname, '..', 'test')],
+        include: [path.join(__dirname, '..', 'src'), path.join(__dirname, '..', 'test')]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -108,7 +108,7 @@ module.exports = {
           service_worker: true
         }
       ]
-    }),
+    })
   ],
-  performance: { hints: false },
+  performance: { hints: false }
 }

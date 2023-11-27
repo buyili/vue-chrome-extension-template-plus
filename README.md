@@ -1,4 +1,4 @@
-# Vue.js Chrome Extension Template ([wcer](https://github.com/YuraDev/wcer))
+# Vue.js Chrome Extension Template Plus ([wcer-plus](https://github.com/buyili/wcer-plus))
 > Template for quick creation of Chrome extension on Vuejs c hot reloading when developing.
 
 ![Vue.js Chrome Extension Template images](/docs/images/mini.jpg)
@@ -9,7 +9,7 @@ This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/
 # install vue-cli
 $ npm install -g vue-cli
 # create a new project using the template
-$ vue init YuraDev/vue-chrome-extension-template my-project
+$ vue init buyili/vue-chrome-extension-template-plus my-project
 # install dependencies and go!
 $ cd my-project
 $ npm install # or yarn
