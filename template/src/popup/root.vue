@@ -16,7 +16,7 @@
     }
   }
 </script>
-<style lang="scss">
+<style lang="less">
   div {
     color: blue
   }
