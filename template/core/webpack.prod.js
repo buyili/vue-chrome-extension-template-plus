@@ -8,7 +8,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const {styleLoaders} = require('./tools')
 module.exports = merge(baseWebpack, {
-  devtool: '#cheap-module-eval-source-map',
+  // devtool: '#cheap-module-eval-source-map',
   module: {
     rules: styleLoaders({ extract: true, sourceMap: true })
   },

@@ -13,6 +13,7 @@ module.exports = {
     content: resolve('./content'), 
     devtools: resolve('./devtools'),
     background: resolve('./backend'),
+    "service_worker": resolve('./service_worker'),
     panel: resolve('./devtools/panel'),
     inject: resolve('./content/inject'),
   },
@@ -99,7 +100,14 @@ module.exports = {
     new CopyWebpackPlugin([{ from: path.join(__dirname, '..', 'static') }]),
     new ChromeReloadPlugin({
       port: 9090,
-      manifest: path.join(__dirname, '..', 'src', 'manifest.js')
+      manifest: path.join(__dirname, '..', 'src', 'manifest.js'),
+      entryOptions: [
+        {
+          // filename: 'js/service_worker.js',
+          pattern: /.*service_worker.*/g,
+          service_worker: true
+        }
+      ]
     }),
   ],
   performance: { hints: false },
