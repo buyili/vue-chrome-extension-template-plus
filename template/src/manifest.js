@@ -16,7 +16,8 @@ module.exports = {
     'storage',
     'notifications',
     'identity',
-    'identity.email'
+    'identity.email',
+    'offscreen'
   ],
   host_permissions: [
     '<all_urls>',

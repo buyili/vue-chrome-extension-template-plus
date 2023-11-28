@@ -98,6 +98,7 @@ module.exports = {
     htmlPage('options', 'options', ['options']),
     htmlPage('background', 'background', ['background']),
     new CopyWebpackPlugin([{ from: path.join(__dirname, '..', 'static') }]),
+    new CopyWebpackPlugin([{ from: path.join(__dirname, '..', 'src/offscreen/clipboard'), to: 'offscreen/clipboard' }]),
     new ChromeReloadPlugin({
       port: 9090,
       manifest: path.join(__dirname, '..', 'src', 'manifest.js'),
